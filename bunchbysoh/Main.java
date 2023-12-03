@@ -25,7 +25,7 @@ public class Main {
       //Classify batteries by SoH
       if(soh >= 80 && soh <= 100){
         counts.healthy++;
-      }else if(soh >= 62 && soh < 80{
+      }else if(soh >= 62 && soh < 80){
         counts.exchange++;
       }else{
         counts.failed++;
