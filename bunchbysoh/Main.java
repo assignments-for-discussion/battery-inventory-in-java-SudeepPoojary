@@ -49,24 +49,24 @@ public class Main {
 
     //Checking for other test cases
     int[] testCase1 = {0}; //Battery with 0 present capacity 
-    CountsBySoH counts = countBatteriesByHealth(testCase1);
+    CountsBySoH counts1 = countBatteriesByHealth(testCase1);
 
     //Validating counts returned by countBatteriesByHealth method
-    assert(counts.healthy == 0);
-    assert(counts.exchange == 0);
-    assert(counts.failed == 1);
+    assert(counts1.healthy == 0);
+    assert(counts1.exchange == 0);
+    assert(counts1.failed == 1);
 
     int[] testCase2 = {120}; //Battery with full rated capacity 
-    CountsBySoH counts = countBatteriesByHealth(testCase2);
+    CountsBySoH counts2 = countBatteriesByHealth(testCase2);
 
     //Validating counts returned by countBatteriesByHealth method
-    assert(counts.healthy == 1);
-    assert(counts.exchange == 0);
-    assert(counts.failed == 0);
+    assert(counts2.healthy == 1);
+    assert(counts2.exchange == 0);
+    assert(counts2.failed == 0);
 
     int[] testCase3 = {-40, 90, 130}; //Battery with invalid present capacities
     try{
-      CountsBySoH counts = countBatteriesByHealth(testCase3);
+      CountsBySoH counts3 = countBatteriesByHealth(testCase3);
     }catch(IllegalArgumentException e){
       //Display error message
       System.out.println(e.getMessage());
